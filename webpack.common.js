@@ -82,7 +82,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new CleanWebpackPlugin(['dist']),
+    new CleanWebpackPlugin(['docs']),
     new HtmlWebpackPlugin({
       title: 'tris-webpack-boilerplate',
       filename: 'index.html',
@@ -118,6 +118,6 @@ module.exports = {
   },
   output: {
     filename: 'webpack-bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'docs')
   }
 };
