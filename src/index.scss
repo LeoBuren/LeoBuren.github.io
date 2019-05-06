@@ -13,6 +13,17 @@
 //! global styles
 @import "./styles/global/typography";         // global typography
 @import "./styles/global/global";             // global styles
+@import "./styles/global/variables";
+
+//! components
+@import "./styles/components/round-img";
+@import "./styles/components/button";
+
+//! vendors
 
 //! sections
 @import "./styles/layout/header";
+@import "./styles/layout/aside";
+
+//! pages
+@import "./styles/pages/index";

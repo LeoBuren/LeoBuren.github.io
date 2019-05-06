@@ -1,26 +1,163 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
 header {
-  background: $light-grey;
-}
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: $padding 0;
+  z-index: 10;
 
-.nav {
-  display: flex;
-  align-items: center;
-  border-bottom: 1px solid $grey;
-  .link {
-    &:hover {
-      color: darken($color-primary, 15);
-    }
+  a { color: inherit; 
+  &:hover {
+      color: $accent-color;
+  }}
+
+  & > div {
+      @include mq(small) {
+          padding: 0 $padding;
+      }
+      &.sticky {
+          position: fixed;
+          top: 0;
+          height: 64px;
+          width: 100%;
+          transition: background-color .3s cubic-bezier(0,0,0.3,1),
+          color .3s cubic-bezier(0,0,0.3,1);
+          left: 0;
+          background-color: #fff;
+          color: hsl(210, 100%, 4%);
+          overflow: hidden;
+          h1 {
+              color: hsl(210, 100%, 4%);
+              border-color: hsl(210, 100%, 4%);
+
+              &:before, &:after {
+                  border-color: #fff;
+              }
+          }
+          box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+
+          a:hover {
+              color: $brand-color;
+          }
+          button:hover {
+              color: $brand-color;
+          }
+
+      & > div {
+          width: 100%;
+          padding: 0 1.5rem;
+          height: 100%;
+          
+          @include mq(small) {
+              width: $width;
+              padding: 0;
+          }
+          margin: auto;
+
+          & > a:hover > img {
+              filter: brightness(0%);
+          }
+      }
   }
-  .logo-link {
-    padding: 10px 10px;
-    margin-right: 10px;
-    border-right: 1px solid $grey;
-    &:hover {
-      background: $pink;
-    }
-  }
-  .logo-img {
-    width: 25px;
-    height: 25px;
+      & > div {
+          position: relative;
+          padding: 0 1.5rem; 
+          @include mq(small) {
+              width: $width;
+              padding: 0;
+          }
+          margin: auto;
+          height: 48px;
+          display: flex;
+          align-items: center;
+
+          & > a, img, h1 {
+              display: inline;
+          }
+
+          h1 {
+            position: relative;
+            font-weight: 700;
+            color: hsl(210, 100%, 90%);
+            text-transform: uppercase;
+            font-size: 1.9em;
+            border: 1px solid hsl(210, 100%, 90%);
+            padding: .25em .45em;
+
+            &:hover {
+                color: hsl(210, 100%, 60%);
+                border: 1px solid hsl(210, 100%, 60%);
+            }
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: .15em; bottom: .15em;
+                left: -.5em; right: -.5em;
+                border: 4px solid hsl(210, 100%, 4%);
+                z-index: 2;
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                left: .15em; right: .15em;
+                top: -.5em; bottom: -.5em;
+                border: 4px solid hsl(210, 100%, 4%);
+                z-index: 2;
+            }
+          }
+
+          nav {
+              @include mq(medium) {
+                  display: flex;
+              }
+              display: none;
+              width: 75%;
+              justify-content: center;
+              align-items: center;
+
+              a {
+                  font-size: 1.8em;
+                  position: relative;
+                  color: hsl(210, 100%, 90%);
+
+                  &:hover {
+                    color: hsl(210, 100%, 60%);
+                  }
+
+                  &+a {
+                      margin-left: 1.5em;
+                      padding-left: 1.5em;
+
+                      &:before {
+                          content: '/';
+                          position: absolute;
+                          left: 0;
+                      }
+                  }
+              }
+          }
+          button {
+            color: hsl(210, 100%, 90%);
+            @include mq(medium) {
+                display: none !important;
+            }
+            border: none;
+            background: none;
+            margin-left: auto;
+            
+            font-size: 3em !important;
+            padding: 0;
+
+            &:hover {
+                color: $accent-color;
+                cursor: pointer;
+            }
+          }
+      }
   }
 }
