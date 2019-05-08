@@ -5,15 +5,6 @@
     overflow: hidden;
     pointer-events: none;
     z-index: 11;
-
-    &.side-nav--visible {
-        background-color: rgba(0,0,0,0.6);
-        pointer-events: auto;
-        .side-nav-container {
-          transform: translateX(0);
-          transition: transform 0.33s cubic-bezier(0,0,0.3,1);
-        }
-    }
     
     .side-nav-container {
         margin-left: auto;

@@ -1,12 +1,6 @@
 main {
     & > section {
         position: relative;
-        &:first-child {
-            padding-top: 100px;
-            @include mq(small) {
-                height: $frontpage-height;
-            }
-        }
 
         div.container {
             width: 100%;
@@ -20,38 +14,71 @@ main {
             margin: auto;
         }
     }
+
+    & > h1 {
+        margin: $padding 0 0 1.5rem;
+        @include mq(medium) {
+            margin: calc(#{$padding} * 2) 0 0 calc((100% - #{$width}) / 2);
+            span {
+                color: hsl(210, 100%, 90%);
+            }
+        }
+        
+        font-size: 2em;
+        @include mq(small) {
+            font-size: 2.8em;
+        }
+        
+        position: relative;
+        padding-bottom: 1em;
+
+
+        
+
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0;
+            width: 2.5em; height: 5px;
+            background: $accent-color;
+        }
+    }
+
+    & > .background {
+        position: absolute;
+        z-index: -2;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        
+        
+        @include mq(medium) {
+            clip-path: polygon(0 0, 0% 100%, 100% 0);
+            width: 1600px;
+            height: 1535px;
+            max-width: 95%;
+        }
+        background: hsl(210, 100%, 15%);
+        
+
+        & > div {
+            z-index: -2;
+            height: 90%;
+            //background: #111;
+            background: hsl(210, 100%, 4%);
+            @include mq(medium) {
+                width: 90%;
+                clip-path: polygon(0 0, 0% 100%, 100% 0);
+            }
+            
+        }
+    }
 }
 
 #index {
     #frontpage {
         overflow: hidden;
-
-        .background {
-            position: absolute;
-            z-index: -1;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            
-            @include mq(medium) {
-                clip-path: polygon(0 0, 100% 0, 40% 100%, 0% 100%);
-                width: 1600px;
-                max-width: 95%;
-            }
-            background: hsl(210, 100%, 15%);
-            
-
-            & > div {
-                z-index: -2;
-                 height: 100%;
-                //background: #111;
-                background: hsl(210, 100%, 4%);
-                @include mq(medium) {
-                    width: 90%;
-                    clip-path: polygon(0 0, 100% 0, 33% 100%, 0% 100%);
-                }
-                
-            }
-        }
+        padding-top: 100px;
+        height: 100vh;
 
         & > h1 {
             @include mq(medium) {
@@ -112,7 +139,7 @@ main {
                         position: absolute;
                         bottom: 0; left: 0;
                         width: 2.5em; height: 5px;
-                        background: linear-gradient(225deg, $brand-color, adjust-hue($brand-color, 20%));
+                        background: $accent-color;
                     }
                 }
                 
@@ -134,7 +161,6 @@ main {
 
                 button {
                     margin-top: 2.5em;
-                    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
                 }
 
                 nav {

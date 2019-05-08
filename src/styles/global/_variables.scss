@@ -14,12 +14,12 @@ $text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvet
 /// @type List
 $code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
 
-$padding: 2rem;
-$small-padding: 1rem;
-$width: 85%;
+$padding: 4rem;
+$small-padding: 2rem;
+$width: 75%;
 $frontpage-height: 100vh;
 $small-width: 95%;
-$border-radius: 4px;
+$border-radius: 6px;
 
 
 /// Copy text color
@@ -30,7 +30,7 @@ $text-color: rgb(34, 34, 34) !default;
 /// @type Color
 $brand-color: #dd3333 !default;
 
-$accent-color: #33DD33 !default;
+$accent-color: #96c93d !default;
 
 //white
 $white: #fefffe !default; 

@@ -24,10 +24,19 @@
   <meta name="msapplication-navbutton-color" content="#2c638f">
   <!-- Mobile header color for iOS Safari (supports black, black-translucent or default) -->
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <script src="scripts/script.js" defer></script>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
+  <style>
+  .side-nav-visible {
+      background-color: rgba(0,0,0,0.6);
+      pointer-events: auto !important;
+  }
+  .side-nav-visible .side-nav-container {
+          transition: transform 0.33s cubic-bezier(0,0,0.3,1);
+          transform: translateX(0) !important;
+  }
+  </style>
 </head>
 
 <body>
@@ -37,7 +46,7 @@
   <header>
       <div class="header-container">
           <div>
-              <a href="#" data-val='#description1' data-id="0">
+              <a href="#">
                   <h1>LB</h1>
               </a>
               <nav>
@@ -66,6 +75,9 @@
       </aside>
   </header>
   <main id="index">
+    <div class="background">
+      <div></div>
+    </div>
     <section id="frontpage">
       <h1>Designer</h1>
       <div class="container">
@@ -101,9 +113,79 @@
           </nav>
         </section>
       </div>
-      <div class="background">
-        <div></div>
+    </section>
+    <h1><span>Featured</span> content</h1>
+    <section class="featured-content">
+      <div class="featured-content__container">
+        <a href="#" class="featured-content__container__link">
+          <figure class="featured-content__container__link__figure">
+              <picture class="featured-content__container__link__figure__picture">
+                  <img class="featured-content__container__link__figure__picture__image lazy"
+                  sizes="(max-width: 500px) 30vw, 50vw"
+                  data-srcset="
+                  ./images/markus-spiske-666905-unsplash_w_200.jpg 200w,
+                  ./images/markus-spiske-666905-unsplash_w_391.jpg 391w,
+                  ./images/markus-spiske-666905-unsplash_w_531.jpg 531w,
+                  ./images/markus-spiske-666905-unsplash_w_672.jpg 672w,
+                  ./images/markus-spiske-666905-unsplash_w_792.jpg 792w,
+                  ./images/markus-spiske-666905-unsplash_w_904.jpg 904w,
+                  ./images/markus-spiske-666905-unsplash_w_1010.jpg 1010w,
+                  ./images/markus-spiske-666905-unsplash_w_1134.jpg 1134w,
+                  ./images/markus-spiske-666905-unsplash_w_1400.jpg 1400w"
+                  data-src="./images/markus-spiske-666905-unsplash_w_1400.jpg"
+                  alt="">
+              </picture>
+            <p class="featured-content__container__link__figure__date">2016 - 2018</p>
+            <div class="featured-content__container__link__figure__container">
+              <i class="featured-content__container__link__figure__container__icon fas fa-baby-carriage"></i>
+              <h1 class="featured-content__container__link__figure__container__title">Daydream</h1>
+            </div>
+          </figure>
+        </a>
+        <div class="featured-content__container__container">
+          <article class="featured-content__container__container__article">
+              <h1 class="featured-content__container__container__article__title">Daydream Labs</h1>
+              <h2 class="featured-content__container__container__article__role">Product Designer & Engineer</h2>
+              <p class="featured-content__container__container__article__content">Daydream Labs is an innovation-driven team at Google that builds prototypes to explore and evaluate use cases and product ideas in VR and AR.</p>
+              <button class="btn btn-primary">case study</button>
+          </article>
+        </div>
       </div>
+      <div class="featured-content__container">
+          <a href="#" class="featured-content__container__link">
+            <figure class="featured-content__container__link__figure">
+                <picture class="featured-content__container__link__figure__picture">
+                    <img class="featured-content__container__link__figure__picture__image lazy"
+                    sizes="(max-width: 500px) 30vw, 50vw"
+                    data-srcset="
+                    ./images/markus-spiske-666905-unsplash_w_200.jpg 200w,
+                    ./images/markus-spiske-666905-unsplash_w_391.jpg 391w,
+                    ./images/markus-spiske-666905-unsplash_w_531.jpg 531w,
+                    ./images/markus-spiske-666905-unsplash_w_672.jpg 672w,
+                    ./images/markus-spiske-666905-unsplash_w_792.jpg 792w,
+                    ./images/markus-spiske-666905-unsplash_w_904.jpg 904w,
+                    ./images/markus-spiske-666905-unsplash_w_1010.jpg 1010w,
+                    ./images/markus-spiske-666905-unsplash_w_1134.jpg 1134w,
+                    ./images/markus-spiske-666905-unsplash_w_1400.jpg 1400w"
+                    data-src="./images/markus-spiske-666905-unsplash_w_1400.jpg"
+                    alt="">
+                </picture>
+              <p class="featured-content__container__link__figure__date">2016 - 2018</p>
+              <div class="featured-content__container__link__figure__container">
+                <i class="featured-content__container__link__figure__container__icon fas fa-baby-carriage"></i>
+                <h1 class="featured-content__container__link__figure__container__title">Daydream</h1>
+              </div>
+            </figure>
+          </a>
+          <div class="featured-content__container__container">
+            <article class="featured-content__container__container__article">
+                <h1 class="featured-content__container__container__article__title">Daydream Labs</h1>
+                <h2 class="featured-content__container__container__article__role">Product Designer & Engineer</h2>
+                <p class="featured-content__container__container__article__content">Daydream Labs is an innovation-driven team at Google that builds prototypes to explore and evaluate use cases and product ideas in VR and AR.</p>
+                <button class="btn btn-primary">case study</button>
+            </article>
+          </div>
+        </div>
     </section>
   </main>
   <footer></footer>
