@@ -30,14 +30,14 @@ header {
           color .3s cubic-bezier(0,0,0.3,1);
           left: 0;
           background-color: #fff;
-          color: hsl(210, 100%, 4%);
+          color: $dark-blue;
           overflow: hidden;
           nav, button {
               color: inherit;
           }
           h1 {
-              color: hsl(210, 100%, 4%);
-              border-color: hsl(210, 100%, 4%);
+              color: $dark-blue;
+              border-color: $dark-blue;
 
               &:before, &:after {
                     transition: border-color .3s cubic-bezier(0,0,0.3,1);
@@ -100,7 +100,12 @@ header {
                 position: absolute;
                 top: .15em; bottom: .15em;
                 left: -.5em; right: -.5em;
-                border: .25em solid hsl(210, 100%, 15%);
+                border: .25em solid $dark-blue;
+
+                @include mq(medium) {
+                    border: .25em solid hsl(210, 100%, 15%);
+                }
+                
                 z-index: 2;
             }
             &:after {
@@ -108,7 +113,11 @@ header {
                 position: absolute;
                 left: .15em; right: .15em;
                 top: -.5em; bottom: -.5em;
-                border: .25em solid hsl(210, 100%, 15%);
+                border: .25em solid $dark-blue;
+
+                @include mq(medium) {
+                    border: .25em solid hsl(210, 100%, 15%);
+                }
                 z-index: 2;
             }
           }
