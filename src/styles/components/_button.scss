@@ -59,4 +59,22 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.19), 0 3px 3px rgba(0, 0, 0, 0.23);
         }
     }
+
+    &.btn-lowkey {
+        background-color: $brand-color;
+        width: 100%;
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.19), 0 5px 5px rgba(0, 0, 0, 0.23);
+        color: #fff;
+
+        @include mq(small) {
+            width: initial;
+        }
+
+        &:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+        }
+        &:focus {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.19), 0 3px 3px rgba(0, 0, 0, 0.23);
+        }
+    }
 }

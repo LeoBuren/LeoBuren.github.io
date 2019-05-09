@@ -43,6 +43,10 @@ h2 {
 p {
   line-height: 1.375em;
   max-width: 40em;
+
+  &+p {
+    margin-top: 1em;
+  }
 }
 
 .button {
