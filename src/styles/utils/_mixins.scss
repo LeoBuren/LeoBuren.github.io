@@ -78,3 +78,49 @@ position: relative;
 @include centered;
 }
 */
+
+@mixin coloured-card($color, $bool: false) {
+  @if($bool == true) {
+    .unfolding-list {
+      &__item {
+          &:nth-child(1) {
+              background: hsl($color, 100%, 22%);
+          }
+          &:nth-child(2) {
+              background: hsl($color, 100%, 92%);
+          }
+          &:nth-child(3) {
+              background: hsl($color, 100%, 80%);
+          }
+      }
+    }
+  }@else {
+    .unfolding-list {
+      &__item {
+          &:nth-child(1) {
+              background: linear-gradient(to bottom, hsl($color, 100%, 22%), #101922);
+  
+              li {
+                  color: hsl($color, 100%, 85%);
+                  border-color: hsl($color, 100%, 85%);
+              }
+          }
+          &:nth-child(2) {
+              background: linear-gradient(to bottom, hsl($color, 100%, 88%), #101922);
+              p {
+                color: hsl($color, 100%, 6%);
+              }
+          }
+          &:nth-child(3) {
+              background: linear-gradient(to bottom, hsl($color, 100%, 76%), #101922);
+          }
+        }
+    }
+    button {
+        background-color: hsl($color, 100%, 22%);
+        &:hover {
+            background-color: hsl($color, 100%, 35%);
+        }
+    }
+  }
+}
