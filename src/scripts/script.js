@@ -1,4 +1,7 @@
 import LazyLoadImages from './lazyload';
+const _ = {
+    throttle: require('lodash.throttle')
+};
 
 /*$(document).on('click', 'a[href^="#"]', function() {
     $('html, body').animate({
@@ -8,7 +11,6 @@ import LazyLoadImages from './lazyload';
 
 document.querySelectorAll('a[href^="#"]').forEach(el => el.addEventListener('click', e => {
     e.preventDefault();
-    console.log(el);
     window.scroll({
         behavior: 'smooth',
         left: 0,
@@ -50,15 +52,22 @@ hideButtonEl.addEventListener('click', () => sideNavEl.classList.remove('side-na
 sideNavEl.addEventListener('click', e => e.target==sideNavContainerEl?null:sideNavEl.classList.remove('side-nav-visible'));
 
 const headerEl = document.querySelector('.header-container');
+const toTopEl = document.querySelector('#to-top');
 let headerOffset = headerEl.scrollHeight-44;
 
-window.addEventListener('scroll', () => window.pageYOffset >= headerOffset ? 
-    headerEl.classList.add('sticky'):headerEl.classList.remove('sticky'), 
-    {
-        capture: true,
-        passive: true
-    }
-);
+window.addEventListener('scroll', _.throttle(() => {
+    console.log('poopa');
+    const h = window.pageYOffset+document.body.offsetHeight;
+    const half = document.body.scrollHeight/1.5;
+    window.pageYOffset >= headerOffset ? 
+        headerEl.classList.add('sticky'):headerEl.classList.remove('sticky');
+
+    h <= half ?
+        toTopEl.classList.add('visible'):toTopEl.classList.remove('visible');
+}, 100), {
+    capture: true,
+    passive: true
+});
 
 document.addEventListener("DOMContentLoaded", () => {
     sideNavContainerEl.style.display = 'flex';

@@ -9,11 +9,6 @@ header {
   top: 0;
   z-index: 10;
 
-  a { color: inherit; 
-  &:hover {
-      color: $accent-color;
-  }}
-
   & > div {
       overflow: hidden;
       padding-top: $small-padding;
@@ -24,7 +19,7 @@ header {
           position: fixed;
           top: 0;
           padding-top: 0;
-          height: 64px;
+          height: 53px;
           width: 100%;
           transition: background-color .3s cubic-bezier(0,0,0.3,1),
           color .3s cubic-bezier(0,0,0.3,1);
@@ -40,12 +35,11 @@ header {
               border-color: $dark-blue;
 
               &:before, &:after {
-                    transition: border-color .3s cubic-bezier(0,0,0.3,1);
-                  border-color: #fff;
+                transition: border-color .3s cubic-bezier(0,0,0.3,1);
+                border-color: #fff;
               }
           }
           box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
-
 
       & > div {
           width: 100%;
@@ -71,7 +65,7 @@ header {
               padding: 0;
           }
           margin: auto;
-          height: 64px;
+          height: 53px;
           display: flex;
           align-items: center;
 
@@ -84,11 +78,12 @@ header {
             font-weight: 700;
             color: hsl(210, 100%, 90%);
             text-transform: uppercase;
-            font-size: 1.5em;
+            font-size: 1.2em;
             border-radius: 2px;
             border: 3px solid hsl(210, 100%, 90%);
             padding: .25em .45em;
             letter-spacing: -0.05em;
+            transition: color 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), border-color 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 
             &:hover {
                 color: hsl(210, 100%, 60%);
@@ -134,9 +129,10 @@ header {
               
 
               a {
-                  font-size: 1.8em;
+                  font-size: 1.4em;
                   position: relative;
                   color: inherit;
+                  transition: color 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 
                   &:hover {
                     color: hsl(210, 100%, 60%);
