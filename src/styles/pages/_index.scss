@@ -7,7 +7,7 @@ main {
             padding: $small-padding 1.5rem;
             @include mq(small) {
                 padding: $padding 0;
-                width: $width;
+                width: $width; max-width: $max-width;
             }
 
             height: 100%;
@@ -29,7 +29,7 @@ main {
             color: hsl(210, 100%, 80%);
         }
         @include mq(small) {
-            width: $width;
+            width: $width; max-width: $max-width;
             margin:auto;
             padding: 0;
         }
@@ -51,7 +51,8 @@ main {
     & > h1, & > section > h1 {
         margin: $padding 0 0 1.5rem;
         @include mq(medium) {
-            margin: calc(#{$padding} * 2) 0 0 calc((100% - #{$width}) / 2);
+            margin: calc(#{$padding} * 2) auto 0;
+            width: $width; max-width: $max-width;
             span {
                 color: hsl(210, 100%, 90%);
             }

@@ -4,7 +4,7 @@
     margin: auto;
 
     @include mq(medium) {
-        width: $width;
+        width: $width; max-width: $max-width;
         padding: $padding 0;
         
     }

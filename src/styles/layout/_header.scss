@@ -47,7 +47,7 @@ header {
           height: 100%;
           
           @include mq(small) {
-              width: $width;
+              width: $width; max-width: $max-width;
               padding: 0;
           }
           margin: auto;
@@ -61,7 +61,7 @@ header {
           position: relative;
           padding: 0 1.5rem; 
           @include mq(small) {
-              width: $width;
+              width: $width; max-width: $max-width;
               padding: 0;
           }
           margin: auto;

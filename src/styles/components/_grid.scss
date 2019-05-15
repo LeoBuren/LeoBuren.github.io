@@ -1,7 +1,7 @@
 .grid {
     width: 100%;
     @include mq(medium) {
-        width: $width;
+        width: $width; max-width: $max-width;
         margin: auto;
     }
 
