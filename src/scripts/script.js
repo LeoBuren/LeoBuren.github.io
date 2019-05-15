@@ -64,10 +64,7 @@ window.addEventListener('scroll', _.throttle(() => {
 
     h <= half ?
         toTopEl.classList.add('visible'):toTopEl.classList.remove('visible');
-}, 100), {
-    capture: true,
-    passive: true
-});
+}, 100));
 
 document.addEventListener("DOMContentLoaded", () => {
     sideNavContainerEl.style.display = 'flex';
