@@ -107,14 +107,11 @@ position: relative;
   @if($bool == true) {
     .unfolding-list {
       &__item {
-          &:nth-child(1) {
-              background: hsl($color, 100%, 22%);
+          &:nth-child(1), &:nth-child(3) {
+              background: hsl($color, $saturation, $lightness);
           }
           &:nth-child(2) {
-              background: hsl($color, 100%, 92%);
-          }
-          &:nth-child(3) {
-              background: hsl($color, 100%, 80%);
+              background: hsl($color, $saturation, 94%);
           }
       }
     }
@@ -122,11 +119,11 @@ position: relative;
     .unfolding-list {
       &__item {
           &:nth-child(1) {
-              background: linear-gradient(to bottom, hsl($color, 100%, 22%), #101922);
+              background: linear-gradient(to bottom, hsl($color, $saturation, $lightness), #101922);
   
               li {
-                  color: hsl($color, 100%, 85%);
-                  border-color: hsl($color, 100%, 85%);
+                  color: hsl($color, 100%, 90%);
+                  border-color: hsl($color, 100%, 90%);
               }
           }
           &:nth-child(2) {
@@ -141,9 +138,10 @@ position: relative;
         }
     }
     button {
-        background-color: hsl($color, 100%, 22%);
+        color: hsl($color, $saturation, $lightness);
+        background-color: hsl($color, $saturation, 80%);
         &:hover {
-            background-color: hsl($color, 100%, 35%);
+            background-color: hsl($color, $saturation, 95%);
         }
     }
   }

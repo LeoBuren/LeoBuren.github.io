@@ -37,11 +37,11 @@
     }
 
     &[class$="--project"] {
-        color: hsl($project, 100%, 85%);
-        background-color: hsl($project, 100%, 22%);
+        color: hsl($project, 100%, 90%);
+        background-color: hsl($project, $saturation, $lightness);
     }
     &[class$="--illustration"] {
-        color: hsl($illustration, 100%, 85%);
-        background-color: hsl($illustration, 100%, 22%);
+        color: hsl($illustration, 100%, 90%);
+        background-color: hsl($illustration, $saturation, $lightness);
     }
 }

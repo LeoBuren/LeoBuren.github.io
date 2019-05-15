@@ -21,14 +21,14 @@
         }
 
         @include mq(medium) {
-            grid-template-columns: .55fr .45fr;
+            grid-template-columns: .53fr .47fr;
             grid-gap: 2em;
             &+& {
                 margin-top: 2em;
             }
 
             &:nth-child(2n) {
-                grid-template-columns: .45fr .55fr;
+                grid-template-columns: .47fr .53fr;
             }
         }
         

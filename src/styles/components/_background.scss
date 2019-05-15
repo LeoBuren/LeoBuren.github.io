@@ -14,7 +14,7 @@
     @include mq(large) {
         clip-path: polygon(0 0, 100% 0, 60% 100%, 0 100%);
         width: 85vw;
-        height: calc(100vh + 14.5em);
+        height: calc(100vh + 14em);
     }
     @include mqh(medium) {
         @include mq(1200px) {

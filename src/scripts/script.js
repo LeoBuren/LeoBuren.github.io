@@ -6,7 +6,16 @@ import LazyLoadImages from './lazyload';
     }, 350)
 });*/
 
-document.querySelectorAll('a[href^="#"]').forEach(el => console.log(el));
+document.querySelectorAll('a[href^="#"]').forEach(el => el.addEventListener('click', e => {
+    e.preventDefault();
+    console.log(el);
+    window.scroll({
+        behavior: 'smooth',
+        left: 0,
+        top: document.querySelector(el.getAttribute('href')).offsetTop-186
+    });
+}));
+    
 // Avoid `console` errors in browsers that lack a console.
 (function() {
     var method;

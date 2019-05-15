@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     padding: $small-padding 1.5rem 0;
-    grid-gap: 2em;
+    grid-gap: $padding;
     
     @include mq(medium) {
         padding: $padding 0;
