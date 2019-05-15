@@ -17,7 +17,7 @@ header {
   & > div {
       overflow: hidden;
       padding-top: $small-padding;
-      @include mq(medium) {
+      @include mqh(medium) {
         padding-top: $padding;
     }
       &.sticky {

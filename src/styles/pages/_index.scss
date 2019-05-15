@@ -9,24 +9,16 @@ main {
                 padding: $padding 0;
                 width: $width;
             }
-            
+
             height: 100%;
             margin: auto;
         }
     }
     & > nav {
-        @include mq(large) {
-            display: none;
-        }
         height: 10vh;
         display: flex;
         width: 100%;
         padding: 0 1.5rem;
-        @include mq(small) {
-            width: $width;
-            margin:auto;
-            padding: 0;
-        }
         
         align-items: center;
         font-size: 2em;
@@ -36,7 +28,24 @@ main {
         a {
             color: hsl(210, 100%, 80%);
         }
-        
+        @include mq(small) {
+            width: $width;
+            margin:auto;
+            padding: 0;
+        }
+        @include mq(medium) {
+            position: absolute;
+            flex-direction: column;
+            left: 1em;
+            bottom: 1em;
+            align-items: start;
+            height: 5em;
+            z-index: 3;
+            width: initial;
+        }
+        @include mqh(medium) {
+            display: none;
+        }
     }
 
     & > h1, & > section > h1 {
@@ -47,7 +56,6 @@ main {
                 color: hsl(210, 100%, 90%);
             }
         }
-        
         font-size: 2em;
         @include mq(small) {
             font-size: 2.8em;
@@ -61,7 +69,11 @@ main {
 #index {
     #frontpage {
         overflow: hidden;
-        padding-top: 150px;
+        padding-top: 125px;
+        @include mqh(medium) {
+            padding-top: 150px;
+        }
+        
         height: 100vh;
         @include mq(medium) {
             height: 90vh;
@@ -72,8 +84,13 @@ main {
 
         .container {
             display: grid;
+            padding-top: 0;
             @include mq(small) {
                 grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            }
+
+            @include mqh(750px) {
+                padding: $padding 0;
             }
             
             .round-img {
@@ -106,18 +123,8 @@ main {
                     @include mq(small) {
                         font-size: 2.8em;
                     }
-                    
-                    position: relative;
-                    padding-bottom: 1em;
-                    color: hsl(210, 100%, 90%);
 
-                    &:after {
-                        content: '';
-                        position: absolute;
-                        bottom: 0; left: 0;
-                        width: 2.5em; height: 5px;
-                        background: $accent-color;
-                    }
+                    color: hsl(210, 100%, 90%);
                 }
                 
                 p {
@@ -125,10 +132,10 @@ main {
                     margin-top: 1.4em;
                     @include mq(small) {
                         font-size: 1.5em;
-                        margin-top: 2em;
+                        margin-top: 1.5em;
                     }
                     @include mqh(medium) {
-                        margin-top: 2.5em;
+                        margin-top: 2em;
                     }
                     
                     color: hsl(210, 100%, 82%);
@@ -151,7 +158,7 @@ main {
 
                 nav {
                     display: none;
-                    @include mq(large) {
+                    @include mqh(medium) {
                         max-width: 250px;
                         display: flex;
                     }
