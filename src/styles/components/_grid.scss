@@ -1,0 +1,36 @@
+.grid {
+    width: 100%;
+    @include mq(medium) {
+        width: $width;
+        margin: auto;
+    }
+
+    display: flex;
+    flex-direction: column;
+
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr;
+        
+        
+
+        grid-gap: 1em;
+
+        &+& {
+            margin-top: 1em;
+        }
+
+        @include mq(medium) {
+            grid-template-columns: .55fr .45fr;
+            grid-gap: 2em;
+            &+& {
+                margin-top: 2em;
+            }
+
+            &:nth-child(2n) {
+                grid-template-columns: .45fr .55fr;
+            }
+        }
+        
+    }
+}

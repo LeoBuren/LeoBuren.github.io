@@ -1,0 +1,41 @@
+.list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    padding: $small-padding 1.5rem 0;
+    grid-gap: 2em;
+    
+    @include mq(medium) {
+        padding: $padding 0;
+    }
+    
+    &__title {
+        font-size: 1.8em;
+        color: hsl(201, 10%, 20%);
+        line-height: 1.5em;
+    }
+    &__container {
+        display: flex;
+        flex-direction: column;
+
+        &__article {
+            letter-spacing: 0.025em;
+            &:first-child {
+                margin-top: 0.25em;
+            }
+            &+& {
+                margin-top: 2em;
+            }
+    
+            &__title {
+                font-size: 1.5em;
+                color: hsl(201, 10%, 25%);
+                margin-bottom: 1em;
+            }
+            &__content {
+                font-size: 1.3em;
+                color: hsl(201, 10%, 40%);
+            }
+        }
+        
+    }
+}
