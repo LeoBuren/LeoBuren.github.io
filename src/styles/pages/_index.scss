@@ -69,17 +69,23 @@ main {
 #index {
     #frontpage {
         overflow: hidden;
-        padding-top: 125px;
-        @include mqh(medium) {
-            padding-top: 150px;
-        }
-        
         height: 100vh;
+        padding-top: 85px;
+
+        @include mq(small) {
+            padding-top: 125px;
+        }        
+
         @include mq(medium) {
             height: 90vh;
         }
+
         @include mq(large) {
             height: 100vh;
+        }
+        
+        @include mqh(medium) {
+            padding-top: 150px;
         }
 
         .container {
