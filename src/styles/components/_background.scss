@@ -12,14 +12,13 @@
     
     
     @include mq(large) {
-        clip-path: polygon(0 0, 100% 0, 60% 100%, 0 100%);
-        width: 85vw;
-        height: calc(100vh + 14em);
+        width: calc(50vw - 2em);
+        left: 2em;
+        top: 2em;
+        height: calc(100vh + 12em);
     }
-    @include mqh(medium) {
-        @include mq(1200px) {
-            clip-path: polygon(0 0, 100% 0, 50% 100%, 0 100%);
-        }
+    @include mq(xl) {
+        width: calc((#{$max-width} / 2) + (100% - #{$max-width}) / 2);
     }
     background: hsl(210, 100%, 15%);
     
@@ -35,5 +34,6 @@
         @include mq(large) {
             display: none;
         }
+        
     }
 }

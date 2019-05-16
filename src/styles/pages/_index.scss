@@ -14,7 +14,7 @@ main {
             margin: auto;
         }
     }
-    & > nav {
+    .social-bar {
         height: 10vh;
         display: flex;
         width: 100%;
@@ -36,15 +36,30 @@ main {
         @include mq(medium) {
             position: absolute;
             flex-direction: column;
-            left: 1em;
-            bottom: 1em;
+            right: 1em;
+            bottom: $padding;
             align-items: start;
             height: 5em;
             z-index: 3;
             width: initial;
+            height: 100vh;
+            justify-content: flex-end;
+            align-items: center;
+            
+
+            & > a {
+                color: hsl(210, 100%, 15%);
+                &+a {
+                    margin-top: .5em;
+                }
+
+                &:hover {
+                    color:hsl(210, 100%, 60%);
+                }
+            }
         }
-        @include mqh(medium) {
-            display: none;
+        @include mq(xl) {
+            right: calc(((100% - #{$max-width}) / 2));
         }
     }
 
@@ -53,6 +68,7 @@ main {
         @include mq(medium) {
             margin: calc(#{$padding} * 2) auto 0;
             width: $width; max-width: $max-width;
+
             span {
                 color: hsl(210, 100%, 90%);
             }
@@ -70,117 +86,79 @@ main {
 #index {
     #frontpage {
         overflow: hidden;
-        height: 100vh;
-        padding-top: 85px;
-
-        @include mq(small) {
-            padding-top: 125px;
-        }        
-
-        @include mq(medium) {
-            height: 90vh;
-        }
-
-        @include mq(large) {
-            height: 100vh;
-        }
-        
-        @include mqh(medium) {
-            padding-top: 150px;
-        }
+        padding-top: 100px;
+        position: relative;
 
         .container {
-            display: grid;
             padding-top: 0;
+            display: grid;
+            grid-gap: $padding;
+            position: relative;
+
             @include mq(small) {
                 grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
             }
 
             @include mqh(750px) {
-                padding: $padding 0;
-            }
-            
-            .round-img {
-                margin: auto;
-            }
-
-            @include mq(large) {
-                .round-img {
-                    order: 1;
-                    margin: $padding auto;
+                & > div {
+                    padding: $padding 0;
                 }
             }
-            
 
-            section {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                height: 100%;
-                @include mq(medium) {
-                    max-height: 750px;
+            & > .tertiary-info {
+                padding: 0;
+                width: calc(100% - #{$padding});
+                
+                & > div {
+                    padding: $padding;
+                    background-color: #84898c;
+                    height: calc(100% - 4rem);
+                    width: calc(100% - 2rem);
+                    margin-top: $padding;
+                }
+            }
+            h1 {
+                font-size: 2em;
+                @include mq(small) {
+                    font-size: 2.8em;
+                }
+
+                color: hsl(210, 100%, 90%);
+            }
+            
+            p {
+                font-size: 1.05em;
+                margin-top: 1.4em;
+                @include mq(small) {
+                    font-size: 1.25em;
+                    margin-top: 1.5em;
                 }
                 @include mqh(medium) {
-                    height:95%;
-                    margin-top: auto;
-                }
-
-                h1 {
-                    font-size: 2em;
-                    @include mq(small) {
-                        font-size: 2.8em;
-                    }
-
-                    color: hsl(210, 100%, 90%);
+                    margin-top: 2em;
                 }
                 
-                p {
-                    font-size: 1.05em;
-                    margin-top: 1.4em;
-                    @include mq(small) {
-                        font-size: 1.5em;
-                        margin-top: 1.5em;
-                    }
-                    @include mqh(medium) {
-                        margin-top: 2em;
-                    }
-                    
-                    color: hsl(210, 100%, 82%);
+                color: hsl(210, 100%, 82%);
 
-                    &+p {
-                        margin-top: 1em;
-                        @include mqh(medium) {
-                            margin-top: 1.5em;
-                        }
-                        max-width: 30em;
-                    }
-                }
-
-                button {
-                    margin-top: 2em;
-                    @include mqh(medium) {
-                        margin-top: 2.5em;
-                    }
-                }
-
-                nav {
-                    display: none;
-                    @include mqh(medium) {
-                        max-width: 250px;
-                        display: flex;
-                    }
-                    justify-content: space-between;
-                    font-size: 2.25em;
-                    
-                    a {
-                        color: hsl(210, 100%, 80%);
-
-                        &:hover {
-                            color: hsl(210, 100%, 60%);
-                        }
-                    }
+                &+p {
+                    margin-top: 1em;
                 }
             }
+
+            button {
+                margin-top: 2em;
+                @include mqh(medium) {
+                    margin-top: 2.5em;
+                }
+            }
+        }
+
+        .movement-arrow {
+            position: absolute;
+            bottom: 0;
+            left: calc(50% + 2em);
+            right: initial;
+            color: hsl(210, 100%, 20%);
+            background-color: hsl(210, 100%, 85%);
         }
     }
 

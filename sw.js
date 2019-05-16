@@ -3,7 +3,7 @@ var __wpo = {
     "main": [
       "./images/favicon.svg",
       "./images/markus-spiske-666905-unsplash_w_1400.jpg",
-      "./images/Ov9VQB2_w_450.png",
+      "./images/duotone.png",
       "./fonts/libre-baskerville-v5-latin-regular.woff",
       "./fonts/libre-baskerville-v5-latin-regular.woff2",
       "./webpack-bundle.css",
@@ -18,17 +18,17 @@ var __wpo = {
   "hashesMap": {
     "014aa3ef72cf2d84ee3776f0672b7e71e477463c": "./images/favicon.svg",
     "c816f8dab5f6892d07aa1d61cdf5dd4b73d25c48": "./images/markus-spiske-666905-unsplash_w_1400.jpg",
-    "bef4e1421267c7fdd344602edaac8ac2e8b57a9b": "./images/Ov9VQB2_w_450.png",
+    "3e16e3eb5d0bd3e7aa9a4b848d04feb1c23d972e": "./images/duotone.png",
     "ba1c671cf1184ee622b2bc57bb07605b5a413de7": "./fonts/libre-baskerville-v5-latin-regular.woff",
     "043840ea188fff2f488849156149cc47707ec289": "./fonts/libre-baskerville-v5-latin-regular.woff2",
-    "f0e7b1cc689d1adfef52b3c9b33627ffbf3515ec": "./webpack-bundle.css",
-    "6b5b395b95fe300d1c4ab0912e89752946395962": "./webpack-bundle.js",
-    "60288663ceb76c0b336a20dbfdf4f59c39fb0692": "./",
+    "5c2514afe5bcb0d651d5d5f904ae263016f2c741": "./webpack-bundle.css",
+    "2ebc6e9f5a0902911cf1006abdbb5d2d28e2b219": "./webpack-bundle.js",
+    "94ab8ebb0d16f948347f2ebaa3e704105f719d3e": "./",
     "10f0b4f3cd054901159ff555db93a26d7b838322": "./404.html"
   },
   "strategy": "changed",
   "responseStrategy": "cache-first",
-  "version": "2019-5-15 23:54:13",
+  "version": "2019-5-16 21:58:40",
   "name": "webpack-offline",
   "pluginVersion": "5.0.6",
   "relativePaths": true
