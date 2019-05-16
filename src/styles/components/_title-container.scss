@@ -1,0 +1,17 @@
+.title-container {
+    @include width();
+    position: relative;
+
+    &__title {
+        padding-bottom: 1em;
+        font-size: 2em;
+        margin: $padding 0 0 0;
+        @include mq(small) {
+            font-size: 2.8em;
+        }
+        
+        &[class$="--light"] {
+            color: hsl(210, 100%, 90%);
+        }
+    }
+}

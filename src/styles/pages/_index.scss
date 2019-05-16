@@ -1,17 +1,23 @@
+#to-top {
+    opacity: 0;
+    pointer-events: none;
+
+    @include mq(xl) {
+        &.visible {
+            opacity: 1 !important;
+            pointer-events: auto !important;
+        }
+    }
+    
+}
 main {
     & > section {
         position: relative;
 
         div.container {
             width: 100%;
-            padding: $small-padding 1.5rem;
-            @include mq(small) {
-                padding: $padding 0;
-                width: $width; max-width: $max-width;
-            }
-
             height: 100%;
-            margin: auto;
+            @include width();
         }
     }
     .social-bar {
@@ -36,7 +42,7 @@ main {
         @include mq(medium) {
             position: absolute;
             flex-direction: column;
-            right: 1em;
+            right: 0;
             bottom: $padding;
             align-items: start;
             height: 5em;
@@ -63,24 +69,7 @@ main {
         }
     }
 
-    & > h1, & > section > h1 {
-        margin: $padding 0 0 1.5rem;
-        @include mq(medium) {
-            margin: calc(#{$padding} * 2) auto 0;
-            width: $width; max-width: $max-width;
-
-            span {
-                color: hsl(210, 100%, 90%);
-            }
-        }
-        font-size: 2em;
-        @include mq(small) {
-            font-size: 2.8em;
-        }
-        
-        position: relative;
-        padding-bottom: 1em;
-    }
+    
 }
 
 #index {
@@ -92,21 +81,24 @@ main {
         .container {
             padding-top: 0;
             display: grid;
-            grid-gap: $padding;
+            grid-gap: 1em;
+            @include mq(xl) {
+                grid-gap: $padding;
+            }
+            
             position: relative;
+            @include width();
 
             @include mq(small) {
                 grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
             }
 
-            @include mqh(750px) {
-                & > div {
-                    padding: $padding 0;
-                }
+            & > .main-info {
+                padding-top: $padding;
+                padding-right: 1em;
             }
-
             & > .tertiary-info {
-                padding: 0;
+                padding-bottom: $padding;
                 width: calc(100% - #{$padding});
                 
                 & > div {
@@ -155,7 +147,10 @@ main {
         .movement-arrow {
             position: absolute;
             bottom: 0;
-            left: calc(50% + 2em);
+            @include mq(xl) {
+                left: calc(50% + 2em);
+            }
+            
             right: initial;
             color: hsl(210, 100%, 20%);
             background-color: hsl(210, 100%, 85%);
@@ -170,9 +165,8 @@ main {
         }
     }
     .grid {
-        padding: $small-padding 1.5rem 0;
         z-index: 2;
-        
+        @include width();
         @include mq(medium) {
             padding: $padding 0;
         }

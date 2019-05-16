@@ -1,8 +1,9 @@
 .list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    padding: $small-padding 1.5rem 0;
     grid-gap: $padding;
+
+    @include width();
     
     @include mq(medium) {
         padding: $padding 0;

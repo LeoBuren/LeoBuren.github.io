@@ -1,11 +1,4 @@
 .movement-arrow {
-
-    @include mq(small) {
-        &:not(.visible) {
-            opacity: 1 !important;
-            pointer-events: auto !important; 
-        }
-    }
     position: fixed;
     display: block;
     bottom: 2rem;

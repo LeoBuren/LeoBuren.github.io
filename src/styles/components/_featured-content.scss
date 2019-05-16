@@ -1,10 +1,8 @@
 .featured-content {
     width: 100%;
-    padding: $small-padding 1.5rem 0;
-    margin: auto;
+    @include width();
 
     @include mq(medium) {
-        width: $width; max-width: $max-width;
         padding: $padding 0;
         
     }

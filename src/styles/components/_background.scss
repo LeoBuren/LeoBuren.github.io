@@ -12,12 +12,13 @@
     
     
     @include mq(large) {
-        width: calc(50vw - 2em);
-        left: 2em;
-        top: 2em;
+        width: calc(50vw);
+        
         height: calc(100vh + 12em);
     }
     @include mq(xl) {
+        left: 2em;
+        top: 2em;
         width: calc((#{$max-width} / 2) + (100% - #{$max-width}) / 2);
     }
     background: hsl(210, 100%, 15%);

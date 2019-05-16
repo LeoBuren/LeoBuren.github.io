@@ -103,6 +103,20 @@ position: relative;
 }
 */
 
+@mixin width() {
+  width: 100vw; max-width: $max-width;
+  padding: $small-padding 1.5rem;
+  @include mq(medium) {
+    padding: initial;
+    margin: auto;
+    width: 96vw;
+  }
+  @include mq(large) {
+    width: 93vw;
+  }
+}
+
+
 @mixin coloured-card($color, $bool: false) {
   @if($bool == true) {
     .unfolding-list {

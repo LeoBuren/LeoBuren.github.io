@@ -62,7 +62,7 @@ window.addEventListener('scroll', _.throttle(() => {
     window.pageYOffset >= headerOffset ? 
         headerEl.classList.add('sticky'):headerEl.classList.remove('sticky');
 
-    h <= half ?
+    h >= half ?
         toTopEl.classList.add('visible'):toTopEl.classList.remove('visible');
 }, 100));
 

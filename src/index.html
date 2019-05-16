@@ -43,7 +43,7 @@
   <!--[if lte IE 9]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
-  <a href="#top" class="movement-arrow" id="to-top" style="opacity: 0; pointer-events: none;" class="visible" aria-label="Top of the page">
+  <a href="#top" class="movement-arrow" id="to-top" style="opacity: 0; pointer-events: none;" aria-label="Top of the page">
     <i class="material-icons">
       expand_less
     </i>
@@ -112,10 +112,12 @@
           </div>
       </div>
     </section>
-    <figure class="long-card">
-      <img src="./images/duotone.png">
-      <h1><span>Featured projects</span></h1>
-    </figure>
+    <div class="long-card">
+      <figure >
+        <img src="./images/duotone.png">
+      </figure>
+      <div><h1>Featured projects</h1></div>
+    </div>
     <section id="featured" class="featured-content">
       <div class="featured-content__container">
         <a href="#" class="featured-content__container__link" aria-label="Read the case study">
@@ -236,7 +238,7 @@
           </div>
         </div>
     </section>
-    <h1>Portfolio</h1>
+    <div class="title-container"><h1 class="title-container__title">Portfolio</h1></div>
     <section id="gallery">
       <div class="grid">
         <div class="grid__container">
@@ -596,10 +598,10 @@
               </div>
             </div>
           </div>
-          <h1>Skills</h1>
+          <div class="title-container"><h1 class="title-container__title --light">Skills</h1></div>
       </section>
       <section id="skills">
-        <div class="list container">
+        <div class="list">
           <h1 class="list__title">Software development is hard. Managing projects is hard. Working remotely is hard. Here are some things I'm good at, to help ease the pain.</h1>
           <div class="list__container">
             <article class="list__container__article">
