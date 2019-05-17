@@ -36,6 +36,10 @@
           transition: transform 0.33s cubic-bezier(0,0,0.3,1);
           transform: translateX(0) !important;
   }
+  .visible {
+        opacity: 1 !important;
+        pointer-events: auto !important;
+    }
   </style>
 </head>
 
@@ -54,10 +58,33 @@
               <a href="#top">
                   <h1>LB</h1>
               </a>
-              <nav>
-                <a href="#featured">Featured Projects</a>
-                <a href="#gallery">Portfolio</a>
-                <a href="#skills">Skills</a>
+              <nav class="navbar inner">
+                  <div data-id="skills">
+                      <a href="#skills">Skills</a>
+                    </div>
+                  <div data-id="gallery">
+                      <a href="#gallery">Portfolio</a>
+                    </div>
+                    <div data-id="featured">
+                        <a href="#featured">Case studies</a>
+                      </div>
+                </nav>
+              <nav class="navbar">
+                <div class="navbar__dropdown active">
+                    <a href="#top">Work</a>
+                    <i class="fas fa-caret-down"></i>
+                    <ul class="navbar__dropdown__list">
+                      <li class="navbar__dropdown__list__item"><a href="#featured">Case studies</a></li>
+                      <li class="navbar__dropdown__list__item"><a href="#gallery">Portfolio</a></li>
+                      <li class="navbar__dropdown__list__item"><a href="#skills">Skills</a></li>
+                    </ul>
+                </div>
+                <div>
+                  <a href="#gallery">About</a>
+                </div>
+                <div>
+                  <a href="#skills">Contact</a>
+                </div>
               </nav>
               <button class="js-menu-show header__menu-toggle material-icons">menu</button>
           </div>
@@ -81,8 +108,6 @@
   </header>
   <main id="index">
     <div class="background">
-      <div>
-      </div>
     </div>
     <section id="frontpage">
       <div class="container">
@@ -90,7 +115,10 @@
             <h1>Hey, I'm Kevin.</h1>
             <p>I'm a product designer & engineer with skills and experiences that allow me to take ideas from concept to mock to prototype to production.</p>
             <p>Formerly AR & VR at Google Daydream, design at Google Lens, product at BayRu. Computer science and creative writing at Stanford University.</p>
-            <button class="btn btn-primary">get in touch</button>
+            <button class="btn btn-primary btn-icon">
+              get in touch
+              <i class="fas fa-envelope"></i>
+            </button>
           </div>
           <div class="tertiary-info">
             <div>
@@ -104,7 +132,7 @@
                 <a href="#" aria-label="My LinkedIn profile"><i class="fab fa-linkedin-in"></i></a>
                 <a href="#" aria-label="Send me an email"><i class="fas fa-envelope"></i></a>
             </nav>
-            <a href="#featured" class="movement-arrow" aria-label="Featured projects">
+            <a href="#featured" class="movement-arrow" aria-label="Go to case studies">
                 <i class="fas fa-long-arrow-alt-down"></i>
               </a>
           </div>

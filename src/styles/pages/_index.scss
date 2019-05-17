@@ -1,15 +1,3 @@
-#to-top {
-    opacity: 0;
-    pointer-events: none;
-
-    @include mq(xl) {
-        &.visible {
-            opacity: 1 !important;
-            pointer-events: auto !important;
-        }
-    }
-    
-}
 main {
     & > section {
         position: relative;
@@ -24,12 +12,12 @@ main {
         height: 10vh;
         display: flex;
         width: 100%;
-        padding: 0 1.5rem;
         align-items: center;
         font-size: 2em;
         justify-content: space-between;
         pointer-events: auto;
         z-index: 2;
+        margin: $small-padding 0 0;
         a {
             color: hsl(210, 100%, 80%);
         }
@@ -78,6 +66,11 @@ main {
         padding-top: 100px;
         position: relative;
 
+        background: hsl(210, 100%, 8%);
+        @include mq(large) {
+            background: none;
+        }
+
         .container {
             padding-top: 0;
             display: grid;
@@ -98,21 +91,28 @@ main {
             & > .main-info {
                 padding-top: $padding;
                 padding-right: 1em;
-                background: hsl(210, 100%, 15%);
                 padding-bottom: 4rem;
             }
             & > .tertiary-info {
-                padding-bottom: $padding;
-                width: calc(100% - #{$padding});
+                @include mq(small) {
+                    padding-bottom: $padding;
+                }
+                @include mq(large) {
+                    width: calc(100% - #{$padding});
+                }
                 
                 & > div {
-                    padding: $padding;
-                    background-color: hsl(331, 100%, 96%);
-                    height: calc(100% - 4rem);
-                    width: calc(100% - 2rem);
+                    padding: 1rem 0;
+                    
                     margin-top: 1em;
                     border-top-right-radius: $border-radius;
                     border-bottom-right-radius: $border-radius;
+                    @include mq(large) {
+                        background-color: hsl(331, 100%, 96%);
+                        padding: $padding;
+                        height: calc(100% - 4rem);
+                        width: calc(100% - 2rem);
+                    }
                     @include mq(xl) {
                         @include mqh(medium) {
                             margin-top: $padding;
@@ -167,12 +167,15 @@ main {
         .movement-arrow {
             
             width: 4em;
-            display: flex;
+            display: none;
             align-items: center;
             justify-content: center;
 
             position: absolute;
             bottom: 0;
+            @include mq(small) {
+                display: flex;
+            }
             @include mq(xl) {
                 left: calc(50% + 0.5em);
                 @include mqh(medium) {

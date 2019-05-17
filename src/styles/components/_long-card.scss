@@ -2,7 +2,11 @@
     width: 100%;
     max-width: 100%;
     position: relative;
+    overflow: hidden;
     
+    @include mq(xl) {
+        overflow: initial;
+    }
 
     figure {
         margin-left: auto;
@@ -14,10 +18,12 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        max-height: 542px;
+        max-height: 300px;
+        
         @include mq(xl) {
             border-top-left-radius: $border-radius;
             border-bottom-left-radius: $border-radius;
+            max-height: 542px;
         }
     }
 

@@ -47,21 +47,39 @@ sideNavEl.addEventListener('click', e => e.target==sideNavContainerEl?null:sideN
 
 const headerEl = document.querySelector('.header-container');
 const toTopEl = document.querySelector('#to-top');
+const sections = document.querySelectorAll('main > section');
 
-window.addEventListener('scroll', _.throttle(() => scrollHandler(), 250));
+window.addEventListener('scroll', () => {
+    scrollHandler();
+    slowScrollHandler();
+});
 
-const scrollHandler = () => {
-    console.log('poopa');
-    const headerOffset = headerEl.scrollHeight-44;
+const scrollHandler = _.throttle(() =>
+    window.pageYOffset >= (headerEl.scrollHeight-44) ? 
+        headerEl.classList.add('sticky'):headerEl.classList.remove('sticky'), 100);
+
+const slowScrollHandler = _.throttle(() => {
     const h = window.pageYOffset+document.body.offsetHeight;
     const half = document.body.scrollHeight/1.5;
-
-    window.pageYOffset >= headerOffset ? 
-        headerEl.classList.add('sticky'):headerEl.classList.remove('sticky');
-
     h >= half ?
-        toTopEl.classList.add('visible'):toTopEl.classList.remove('visible');
+    toTopEl.classList.add('visible'):toTopEl.classList.remove('visible');
+
+    document.querySelectorAll("[data-id] > a").forEach(el => el.classList.remove('active'));
+
+    sections.forEach(el => {
+        if(isWithinViewport(el.getBoundingClientRect())) {
+            const exists = document.querySelector("[data-id="+CSS.escape(el.id)+"] > a");
+            if(exists != null)
+                exists.classList.add('active');
+        }
+    });
+}, 400);
+
+const isWithinViewport = rect => {
+    const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+    return ((rect.top + (rect.height / 2)) <= windowHeight) && ((rect.top + (rect.height / 2)) >= 0);
 }
+
 
 document.addEventListener("DOMContentLoaded", () => {
     sideNavContainerEl.style.display = 'flex';
