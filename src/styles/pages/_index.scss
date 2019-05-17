@@ -25,7 +25,6 @@ main {
         display: flex;
         width: 100%;
         padding: 0 1.5rem;
-        
         align-items: center;
         font-size: 2em;
         justify-content: space-between;
@@ -54,7 +53,8 @@ main {
             
 
             & > a {
-                color: hsl(210, 100%, 15%);
+                color: hsl(210, 100%, 25%);
+                transition: color 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
                 &+a {
                     margin-top: .5em;
                 }
@@ -98,6 +98,7 @@ main {
             & > .main-info {
                 padding-top: $padding;
                 padding-right: 1em;
+                background: hsl(210, 100%, 15%);
             }
             & > .tertiary-info {
                 padding-bottom: $padding;
@@ -105,7 +106,7 @@ main {
                 
                 & > div {
                     padding: $padding;
-                    background-color: hsl(331, 69%, 96%);
+                    background-color: hsl(331, 100%, 96%);
                     height: calc(100% - 4rem);
                     width: calc(100% - 2rem);
                     margin-top: 1em;
@@ -121,7 +122,7 @@ main {
                         color: hsl(331, 50%, 60%);
                     }
                     p {
-                        color: hsl(331, 50%, 50%);
+                        color: hsl(331, 50%, 47%);
                     }
                 }
             }
@@ -145,7 +146,7 @@ main {
                     margin-top: 2em;
                 }
                 
-                color: hsl(210, 100%, 82%);
+                color: hsl(210, 100%, 90%);
 
                 &+p {
                     margin-top: 1em;
@@ -161,6 +162,12 @@ main {
         }
 
         .movement-arrow {
+            
+            width: 4em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
             position: absolute;
             bottom: 0;
             @include mq(xl) {
@@ -171,8 +178,28 @@ main {
             }
             
             right: initial;
-            color: hsl(210, 100%, 20%);
-            background-color: hsl(210, 100%, 85%);
+            color: hsl(210, 100%, 25%);
+
+            &:hover {
+                color:hsl(210, 100%, 60%);
+            }
+            i {
+                transition: color 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+                font-size: 1.5em;
+                animation: sdb04 2s infinite;
+
+                @keyframes sdb04 {
+                    0% {
+                        transform: translate(0, 0);
+                      }
+                    20% {
+                      transform: translate(0, .25em);
+                    }
+                    40% {
+                        transform: translate(0, 0);
+                      }
+                  }
+            }
         }
     }
 

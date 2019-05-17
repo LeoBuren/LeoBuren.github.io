@@ -21,14 +21,14 @@ var __wpo = {
     "71a94ed0aea7fa91d0904e5ce5aa28f85c93b135": "./images/long-card.jpg",
     "ba1c671cf1184ee622b2bc57bb07605b5a413de7": "./fonts/libre-baskerville-v5-latin-regular.woff",
     "043840ea188fff2f488849156149cc47707ec289": "./fonts/libre-baskerville-v5-latin-regular.woff2",
-    "686e445c32300eee9ebf5e3dcecd885b70abaa38": "./webpack-bundle.css",
-    "fe18c61ac3afebfb8bd5448644ceafd71dc10f0b": "./webpack-bundle.js",
-    "1c115085c3ac7c0dcea6db335401ca40a20bbda7": "./",
+    "36976318a6107fb04a44fb1821d9391fee2df5aa": "./webpack-bundle.css",
+    "aa27e4fb34104842e805e4255dbb0428e45ba516": "./webpack-bundle.js",
+    "6a9843f0d1aed5c51814e2c74a175fb0047fa2f4": "./",
     "10f0b4f3cd054901159ff555db93a26d7b838322": "./404.html"
   },
   "strategy": "changed",
   "responseStrategy": "cache-first",
-  "version": "2019-5-17 15:36:32",
+  "version": "2019-5-17 16:31:55",
   "name": "webpack-offline",
   "pluginVersion": "5.0.6",
   "relativePaths": true
