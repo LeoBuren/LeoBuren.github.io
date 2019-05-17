@@ -2,7 +2,6 @@
     width: 100%;
     max-width: 100%;
     overflow: hidden;
-    
     position: relative;
 
     figure {
@@ -19,19 +18,13 @@
 
     div {
         position: absolute;
-        font-size: 2em;
-        @include mq(small) {
-            font-size: 2.8em;
-        }
-        bottom: 1em;
-        width: 100%;
-    }
-    h1 {
-        width: $width; max-width: $max-width;
-        margin: auto;
-        font-size: inherit;
+        bottom: 0;
+        width: 100% !important;
+        max-width: initial;
 
-        
-        
+        h1 {
+            @include width();
+            padding-bottom: 1em !important;
+        }
     }
 }

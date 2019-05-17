@@ -83,7 +83,9 @@ main {
             display: grid;
             grid-gap: 1em;
             @include mq(xl) {
-                grid-gap: $padding;
+                @include mqh(medium) {
+                    grid-gap: $padding;
+                }
             }
             
             position: relative;
@@ -106,7 +108,12 @@ main {
                     background-color: #84898c;
                     height: calc(100% - 4rem);
                     width: calc(100% - 2rem);
-                    margin-top: $padding;
+                    margin-top: 1em;
+                    @include mq(xl) {
+                        @include mqh(medium) {
+                            margin-top: $padding;
+                        }
+                    }
                 }
             }
             h1 {
@@ -148,7 +155,10 @@ main {
             position: absolute;
             bottom: 0;
             @include mq(xl) {
-                left: calc(50% + 2em);
+                left: calc(50% + 0.5em);
+                @include mqh(medium) {
+                    left: calc(50% + 2em);
+                }
             }
             
             right: initial;

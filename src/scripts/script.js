@@ -3,12 +3,6 @@ const _ = {
     throttle: require('lodash.throttle')
 };
 
-/*$(document).on('click', 'a[href^="#"]', function() {
-    $('html, body').animate({
-        scrollTop: $($.attr(this, 'href')).offset().top-48
-    }, 350)
-});*/
-
 document.querySelectorAll('a[href^="#"]').forEach(el => el.addEventListener('click', e => {
     e.preventDefault();
     window.scroll({
@@ -53,20 +47,24 @@ sideNavEl.addEventListener('click', e => e.target==sideNavContainerEl?null:sideN
 
 const headerEl = document.querySelector('.header-container');
 const toTopEl = document.querySelector('#to-top');
-let headerOffset = headerEl.scrollHeight-44;
 
-window.addEventListener('scroll', _.throttle(() => {
+window.addEventListener('scroll', _.throttle(() => scrollHandler(), 250));
+
+const scrollHandler = () => {
     console.log('poopa');
+    const headerOffset = headerEl.scrollHeight-44;
     const h = window.pageYOffset+document.body.offsetHeight;
     const half = document.body.scrollHeight/1.5;
+
     window.pageYOffset >= headerOffset ? 
         headerEl.classList.add('sticky'):headerEl.classList.remove('sticky');
 
     h >= half ?
         toTopEl.classList.add('visible'):toTopEl.classList.remove('visible');
-}, 100));
+}
 
 document.addEventListener("DOMContentLoaded", () => {
     sideNavContainerEl.style.display = 'flex';
     new LazyLoadImages();
+    scrollHandler();
 });
