@@ -13,7 +13,7 @@
     
     @include mq(large) {
         width: calc(50vw);
-        height: calc(100vh + 12em);
+        height: calc(100vh + 5em);
     }
     
     @include mq(xl) {
