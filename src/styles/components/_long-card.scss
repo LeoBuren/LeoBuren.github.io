@@ -1,12 +1,13 @@
 .long-card {
     width: 100%;
     max-width: 100%;
-    overflow: hidden;
     position: relative;
+    
 
     figure {
         margin-left: auto;
         width: calc((100% - #{$max-width}) / 2 + #{$max-width} + #{$padding});
+        box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 6px 6px rgba(0,0,0,.14);
     }
 
     img, picture {
@@ -14,6 +15,10 @@
         height: 100%;
         object-fit: cover;
         max-height: 542px;
+        @include mq(xl) {
+            border-top-left-radius: $border-radius;
+            border-bottom-left-radius: $border-radius;
+        }
     }
 
     div {

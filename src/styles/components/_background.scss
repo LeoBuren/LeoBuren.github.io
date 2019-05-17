@@ -17,14 +17,15 @@
     }
     
     @include mq(xl) {
+        border-bottom-right-radius: $border-radius;
         @include mqh(medium) {
             left: 2em;
             top: 2em;
             width: calc((#{$max-width} / 2) + (100% - #{$max-width}) / 2);
+            border-radius: $border-radius;
         }
     }
     background: hsl(210, 100%, 15%);
-    
 
     & > div {
         z-index: -2;

@@ -105,14 +105,23 @@ main {
                 
                 & > div {
                     padding: $padding;
-                    background-color: #84898c;
+                    background-color: hsl(331, 69%, 96%);
                     height: calc(100% - 4rem);
                     width: calc(100% - 2rem);
                     margin-top: 1em;
+                    border-top-right-radius: $border-radius;
+                    border-bottom-right-radius: $border-radius;
                     @include mq(xl) {
                         @include mqh(medium) {
                             margin-top: $padding;
                         }
+                    }
+
+                    h1 {
+                        color: hsl(331, 50%, 60%);
+                    }
+                    p {
+                        color: hsl(331, 50%, 50%);
                     }
                 }
             }
