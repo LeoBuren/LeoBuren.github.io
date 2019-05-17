@@ -77,7 +77,7 @@ const slowScrollHandler = _.throttle(() => {
 
 const isWithinViewport = rect => {
     const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
-    return ((rect.top + (rect.height / 2)) <= windowHeight) && ((rect.top + (rect.height / 2)) >= 0);
+    return ((rect.top + (rect.height / 4)) <= windowHeight) && ((rect.top + (rect.height / 4)) >= -(rect.height / 4));
 }
 
 

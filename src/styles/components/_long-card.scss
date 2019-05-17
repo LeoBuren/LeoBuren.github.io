@@ -5,7 +5,9 @@
     overflow: hidden;
     
     @include mq(xl) {
-        overflow: initial;
+        @include mqh(medium) {
+            overflow: initial;
+        }
     }
 
     figure {
