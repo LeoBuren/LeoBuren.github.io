@@ -28,12 +28,14 @@
 @import "./styles/components/long-card";
 @import "./styles/components/title-container";
 @import "./styles/components/navbar";
+@import "./styles/components/social-bar";
 
 //! vendors
 
 //! sections
 @import "./styles/layout/header";
 @import "./styles/layout/aside";
+@import "./styles/layout/footer";
 
 //! pages
 @import "./styles/pages/index";

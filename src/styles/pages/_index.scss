@@ -8,56 +8,6 @@ main {
             @include width();
         }
     }
-    .social-bar {
-        height: 10vh;
-        display: flex;
-        width: 100%;
-        align-items: center;
-        font-size: 2em;
-        justify-content: space-between;
-        pointer-events: auto;
-        z-index: 2;
-        margin: $small-padding 0 0;
-        a {
-            color: hsl(210, 100%, 80%);
-        }
-        @include mq(small) {
-            width: $width; max-width: $max-width;
-            margin:auto;
-            padding: 0;
-        }
-        @include mq(medium) {
-            position: absolute;
-            flex-direction: column;
-            right: 0;
-            bottom: $padding;
-            align-items: start;
-            height: 5em;
-            z-index: 3;
-            width: initial;
-            height: 100vh;
-            justify-content: flex-end;
-            align-items: center;
-            
-
-            & > a {
-                color: hsl(210, 100%, 25%);
-                transition: color 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-                &+a {
-                    margin-top: .5em;
-                }
-
-                &:hover {
-                    color:hsl(210, 100%, 60%);
-                }
-            }
-        }
-        @include mq(xl) {
-            right: calc(((100% - #{$max-width}) / 2));
-        }
-    }
-
-    
 }
 
 #index {
@@ -124,7 +74,7 @@ main {
                         font-size: 2em;
                     }
                     p {
-                        color: hsl(331, 50%, 47%);
+                        color: hsl(331, 100%, 31%);
                         font-size: 1em;
                     }
                 }
