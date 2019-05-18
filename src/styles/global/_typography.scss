@@ -35,13 +35,15 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-weight: 700;
   color: hsl(201, 100%, 10);
+  line-height: 1.125;
 }
 h2 {
   color: hsl(201, 20, 40);
+  line-height: 1.25;
 }
 
 p {
-  line-height: 1.375em;
+  line-height: 1.5;
   max-width: 40em;
 
   &+p {

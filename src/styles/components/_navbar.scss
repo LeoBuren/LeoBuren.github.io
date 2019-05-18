@@ -6,13 +6,14 @@
     display: none;
     justify-content: flex-end;
     align-items: center;
-    color: hsl(210, 100%, 15%);
+    color: hsl(210, 100%, 6%);
 
     &.inner {
         display: none;
         position: relative;
         margin-right: 3em;
         padding-right: 3em;
+        color: hsl(210, 50%, 20%);
 
         &:after {
             content: '';
@@ -82,7 +83,7 @@
             &__item {
                 background: #f7f7f7;
                 width: 100%;
-                color: hsl(210, 100%, 15%);
+                color: hsl(210, 100%, 6%);
                 font-size: 1rem;
 
                 &:hover {
@@ -128,6 +129,10 @@
     }
     .active, & > div:not(.navbar__dropdown) > a:not(.active):hover {
         position: relative;
-        color: hsl(210, 100%, 60%);
+        color: hsl(210, 100%, 34%);
+        font-weight: bold;
+    }
+    .navbar__dropdown li a {
+        font-weight: normal;
     }
 }

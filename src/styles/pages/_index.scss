@@ -44,8 +44,9 @@ main {
                 padding-bottom: 4rem;
             }
             & > .tertiary-info {
+                overflow: hidden;
                 @include mq(small) {
-                    padding-bottom: $padding;
+                    margin-bottom: $padding;
                 }
                 @include mq(large) {
                     width: calc(100% - #{$padding});
@@ -58,9 +59,9 @@ main {
                     border-top-right-radius: $border-radius;
                     border-bottom-right-radius: $border-radius;
                     @include mq(large) {
-                        background-color: hsl(331, 100%, 96%);
+                        background-color: hsl(331, 100%, 92%);
                         padding: $padding;
-                        height: calc(100% - 4rem);
+                        height: calc(100% - 1em);
                         width: calc(100% - 2rem);
                     }
                     @include mq(xl) {
@@ -70,11 +71,11 @@ main {
                     }
 
                     h1 {
-                        color: hsl(331, 50%, 60%);
+                        color: hsl(331, 40%, 56%);
                         font-size: 2em;
                     }
                     p {
-                        color: hsl(331, 100%, 31%);
+                        color: hsl(331, 50%, 44%);
                         font-size: 1em;
                     }
                 }
@@ -85,7 +86,7 @@ main {
                     font-size: 2.8em;
                 }
 
-                color: hsl(210, 100%, 90%);
+                color: hsl(210, 100%, 95%);
             }
             
             p {
