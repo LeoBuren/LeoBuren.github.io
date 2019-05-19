@@ -1,0 +1,56 @@
+main {
+    & > section {
+        position: relative;
+
+        div.container {
+            width: 100%;
+            height: 100%;
+            @include width();
+        }
+    }
+}
+
+#about {
+    #frontpage {
+        padding: calc(100px + #{$padding}) 0 $padding;
+        
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-gap: $padding;
+
+            picture, img {
+                width: 100%; height: 100%;
+                object-fit: cover;
+            }
+
+            article {
+                h1 {
+                    text-transform: uppercase;
+                    letter-spacing: .1em;
+                    font-size: 1.4em;
+                    margin-bottom: 2rem;
+                    color: $brand-color;
+                }
+                p {
+                    font-size: 1.125em;
+                }
+                a {
+                    margin-top: 1.25em;
+                    display: inline-block;
+                    transition: color 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+                    i {
+                        margin-right: .6em;
+                        font-size: 1.25em;
+                        color: inherit;
+                    }
+
+                    &:hover {
+                        color: hsl(210, 100%, 60%);
+                    }
+                }
+            }
+        }
+    }
+}

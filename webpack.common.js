@@ -24,7 +24,7 @@ module.exports = {
         }]
       },
       {
-        test: /\.(jpe?g|png|gif|svg)$/,
+        test: /\.(jpe?g|png|gif|svg|pdf)$/,
         use: [{
           loader: 'file-loader',
           options: {
@@ -93,6 +93,12 @@ module.exports = {
       title: 'tris-404-page',
       filename: '404.html',
       template: './src/404.html',
+      inject: 'head'
+    }),
+	new HtmlWebpackPlugin({
+      title: 'about',
+      filename: 'about.html',
+      template: './src/about.html',
       inject: 'head'
     }),
     new PreloadWebpackPlugin({
