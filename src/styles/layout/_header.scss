@@ -7,6 +7,7 @@ header {
   right: 0;
   top: 0;
   z-index: 100;
+  font-family: $montserrat;
 
   & > div {
       padding-top: $small-padding;
@@ -26,17 +27,22 @@ header {
           color: $dark-blue;
           overflow: hidden;
 
-          ul, i {
+          
+
+          ul, i, svg, .inner {
             display: none;
           }
-          nav, button {
+          button svg {
+            display: block;
+        }
+          nav, button, svg {
               color: inherit;
           }
           h1 {
               color: $dark-blue;
               border-color: $dark-blue;
 
-              &:before, &:after {
+              &:before {
                 transition: border-color .3s cubic-bezier(0,0,0.3,1);
                 border-color: #fff;
               }
@@ -45,10 +51,11 @@ header {
 
       & > div {
           width: 100%;
-          padding: 0 1.5rem;
           height: 100%;
           
           @include width();
+
+          padding-top: 0; padding-bottom: 0;
 
           & > a:hover > img {
               filter: brightness(0%);
@@ -59,8 +66,11 @@ header {
           width: initial;
       }
       .inner {
-        display: flex;
+          @include mq(medium) {
+            display: flex;
         width: 100%;
+          }
+        
     }
   }
       & > div {
@@ -105,18 +115,6 @@ header {
                 
                 z-index: 2;
             }
-            &:after {
-                content: '';
-                position: absolute;
-                left: .15em; right: .15em;
-                top: -.5em; bottom: -.5em;
-                border: .25em solid $dark-blue;
-
-                @include mq(medium) {
-                    border: .25em solid hsl(210, 100%, 15%);
-                }
-                z-index: 2;
-            }
           }
           button {
             color: hsl(210, 100%, 90%);
@@ -127,7 +125,7 @@ header {
             background: none;
             margin-left: auto;
             
-            font-size: 3em !important;
+            font-size: 2.5em !important;
             padding: 0;
 
             &:hover {

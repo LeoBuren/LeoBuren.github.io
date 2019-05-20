@@ -1,4 +1,7 @@
 .about__header {
+    .header-container:not(.sticky) #top > a > h1:before {
+        border-color: #ffe0ef;
+    }
     .navbar {
         margin-left: auto;
     }
@@ -6,7 +9,7 @@
         overflow: visible;
 
         .navbar {
-            i { 
+            i, svg { 
                 display: inline-block;
             }
             ul {
@@ -16,6 +19,10 @@
                 background: #f7f7f7;
             }
         }
+    }
+
+    .active > a {
+        font-weight: 700;
     }
     
     #top h1 {
@@ -37,6 +44,13 @@
     }
 } 
 #about {
+    .background {
+        height: calc(50vh);
+        background: #ffe0ef;
+        @include mq(xl) {
+            width: calc((640px + (100% - 1280px)/2) - 2em);
+        }
+    }
     & > section {
         position: relative;
 
@@ -70,12 +84,12 @@
                 p {
                     font-size: 1.125em;
                 }
-                a {
+                a:not(.website-link) {
                     margin-top: 1.5rem;
                     display: inline-block;
                     transition: color 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 
-                    i {
+                    i, svg {
                         margin-right: .6em;
                         font-size: 1.25em;
                         color: inherit;

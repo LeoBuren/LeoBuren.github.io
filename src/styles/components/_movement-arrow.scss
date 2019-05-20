@@ -9,7 +9,7 @@
     
     transition: opacity 1.2s ease-out;
 
-    i {
+    i, svg {
         font-size: 4em;
         &:hover {
             animation:shake-top .8s cubic-bezier(.455,.03,.515,.955) both

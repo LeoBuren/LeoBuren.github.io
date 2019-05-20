@@ -36,7 +36,10 @@
         max-width: initial;
 
         h1 {
-            @include width();
+            @include mq(small) {
+                @include width();
+            }
+            
             padding-bottom: 1em !important;
         }
     }

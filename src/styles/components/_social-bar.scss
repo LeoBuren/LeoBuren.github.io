@@ -30,10 +30,10 @@
         align-items: center;
         
 
-        & > a {
+        & > a, & > svg {
             color: hsl(210, 100%, 25%);
             transition: color 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-            &+a {
+            &+a, &+svg {
                 margin-top: .5em;
             }
 
