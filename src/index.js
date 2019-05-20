@@ -1,12 +1,6 @@
 require('offline-plugin/runtime').install();
 import '@fortawesome/fontawesome-free/css/all.css';
 import '@fortawesome/fontawesome-free/js/all.js';
-
-import './fonts/fa-brands-400.ttf';
-import './fonts/fa-brands-400.woff2';
-import './fonts/fa-solid-900.woff';
-import './fonts/fa-solid-900.woff2';
-
 import './images/Leo_Buren_CV.pdf';
 
 import './index.html';
