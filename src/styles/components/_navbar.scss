@@ -124,7 +124,7 @@
             }
         }
     }
-    .active > a, & > div a:not(.active):hover {
+    .navbar:not(.inner) .active > a, & > div a:not(.active):hover {
         position: relative;
         color: hsl(210, 100%, 34%);
         font-weight: bold;
@@ -135,5 +135,13 @@
     }
     .navbar__dropdown li a {
         font-weight: normal;
+    }
+
+    &.inner .active, &.inner a:hover {
+        color: hsl(210, 100%, 34%);
+        font-weight: bold;
+    }
+    &.inner .active:hover {
+        color: #39f;
     }
 }
