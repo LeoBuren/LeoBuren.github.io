@@ -1,4 +1,23 @@
-main {
+.about__header {
+    #top h1 {
+        color: #001429;
+        border-color: #001429;
+    
+        &:before, &:after {
+            border-color: #f7f7f7;
+        }
+    
+        &:hover {
+            color: #39f;
+            border-color: #39f;
+    
+            &:before, &:after {
+                border-color: #fff;
+            }
+        }
+    }
+} 
+#about {
     & > section {
         position: relative;
 
@@ -8,9 +27,6 @@ main {
             @include width();
         }
     }
-}
-
-#about {
     #frontpage {
         padding: calc(100px + #{$padding}) 0 $padding;
         
@@ -29,14 +45,14 @@ main {
                     text-transform: uppercase;
                     letter-spacing: .1em;
                     font-size: 1.4em;
-                    margin-bottom: 2rem;
+                    margin-bottom: 1.5rem;
                     color: $brand-color;
                 }
                 p {
                     font-size: 1.125em;
                 }
                 a {
-                    margin-top: 1.25em;
+                    margin-top: 1.5rem;
                     display: inline-block;
                     transition: color 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 

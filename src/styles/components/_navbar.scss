@@ -112,9 +112,6 @@
             transition: color 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
             color: inherit;
         }
-        &:hover > a {
-          color: hsl(210, 100%, 60%);
-        }
 
         &+div {
             margin-left: 1.5em;
@@ -127,10 +124,14 @@
             }
         }
     }
-    .active, & > div:not(.navbar__dropdown) > a:not(.active):hover {
+    .active > a, & > div a:not(.active):hover {
         position: relative;
         color: hsl(210, 100%, 34%);
         font-weight: bold;
+
+        &:hover {
+            color: #39f;
+        }
     }
     .navbar__dropdown li a {
         font-weight: normal;
