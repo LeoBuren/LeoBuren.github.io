@@ -137,7 +137,7 @@ main {
             right: initial;
             color: hsl(210, 100%, 25%);
 
-            &:hover {
+            &:hover, &:focus, &:focus-within {
                 color:hsl(210, 100%, 60%);
             }
             i {

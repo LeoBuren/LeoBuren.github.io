@@ -26,8 +26,9 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-
+  
   <style>
+    @import url('https://fonts.googleapis.com/css?family=Muli:700|Roboto&display=swap');
   .side-nav-visible {
       background-color: rgba(0,0,0,0.6);
       pointer-events: auto !important;
@@ -83,21 +84,21 @@
                   <a href="./about.html">About</a>
                 </div>
               </nav>
-              <button class="js-menu-show header__menu-toggle material-icons">menu</button>
+              <button tabindex="-1" class="js-menu-show header__menu-toggle material-icons">menu</button>
           </div>
       </div>
       <aside class="side-nav">
           <nav class="side-nav-container" style="display: none">
             <div class="header">
-                <button class="js-menu-hide side-nav__hide material-icons">close</button>
+                <button tabindex="-1" class="js-menu-hide side-nav__hide material-icons">close</button>
             </div>
-            <a href="#">
+            <a tabindex="-1" href="#">
               <h1>Beskriving 1</h1>
             </a>
-            <a href="#">
+            <a tabindex="-1" href="#">
               <h1>Uppgift 1</h1>
             </a>
-            <a href="#">
+            <a tabindex="-1" href="#">
               <h1>Beskrivning 2</h1>
             </a>
           </nav>
@@ -143,7 +144,7 @@
     </div>
     <section id="featured" class="featured-content">
       <div class="featured-content__container">
-        <a href="#" class="featured-content__container__link" aria-label="Read the case study">
+        <a tabindex="-1" href="#" class="featured-content__container__link" aria-label="Read the case study">
           <figure class="featured-content__container__link__figure">
               <noscript>
                   <picture class="featured-content__container__link__figure__picture">
@@ -202,7 +203,7 @@
         </div>
       </div>
       <div class="featured-content__container">
-          <a href="#" class="featured-content__container__link" aria-label="Read the case study">
+          <a tabindex="-1" href="#" class="featured-content__container__link" aria-label="Read the case study">
             <figure class="featured-content__container__link__figure">
                 <noscript>
                     <picture class="featured-content__container__link__figure__picture">

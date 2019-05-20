@@ -19,23 +19,22 @@
     /*
 }*/
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto');
 $roboto: 'Roboto', sans-serif;
-$montserrat: 'Montserrat', sans-serif; 
+$montserrat: 'Muli', sans-serif; 
 
 body {
   font-family: $roboto;
   font-weight: normal;
   color: hsl(201, 20, 10);
 }
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, .navbar:not(.inner) > div > a {
   font-family: $montserrat;
-  font-weight: normal;
+  font-weight: 700;
 }
 h1 {
-  font-weight: 700;
   color: hsl(201, 100%, 10);
   line-height: 1.125;
+  letter-spacing: -0.0125em;
 }
 h2 {
   color: hsl(201, 20, 40);

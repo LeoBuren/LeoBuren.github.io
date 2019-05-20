@@ -1,4 +1,23 @@
 .about__header {
+    .navbar {
+        margin-left: auto;
+    }
+    .sticky {
+        overflow: visible;
+
+        .navbar {
+            i { 
+                display: inline-block;
+            }
+            ul {
+                display: initial;
+            }
+            &__dropdown__list {
+                background: #f7f7f7;
+            }
+        }
+    }
+    
     #top h1 {
         color: #001429;
         border-color: #001429;

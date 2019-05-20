@@ -37,7 +37,7 @@
                 margin-top: .5em;
             }
 
-            &:hover {
+            &:hover, &:focus, &:focus-within {
                 color:hsl(210, 100%, 60%);
             }
         }
