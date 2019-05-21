@@ -7,7 +7,7 @@ const imageminMozjpeg = require('imagemin-mozjpeg');
 const CompressionPlugin = require('compression-webpack-plugin');
 
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
-//const OfflinePlugin = require('offline-plugin');
+const OfflinePlugin = require('offline-plugin');
 
 
 module.exports = merge(common, {
@@ -44,6 +44,6 @@ module.exports = merge(common, {
         windows: true
       }
     }),
-    //new OfflinePlugin()
+    new OfflinePlugin()
   ]
 });
