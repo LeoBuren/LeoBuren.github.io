@@ -1,9 +1,0 @@
-{
-    "name": "Leo Buréns Porfolio",
-    "short_name": "Portfolio",
-    "description": "A website to host the works of Leo Burén",
-    "lang": "en-US",
-    "start_url": "/",
-    "display": "browser",
-    "theme_color": "#00264d"
-  }
