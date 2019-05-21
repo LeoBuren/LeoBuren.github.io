@@ -11,9 +11,13 @@
     }
 
     figure {
+        
+    }
+    .lazy-container {
         margin-left: auto;
         width: calc((100% - #{$max-width}) / 2 + #{$max-width} + #{$padding});
         box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 6px 6px rgba(0,0,0,.14);
+        height: 100%;
     }
 
     img, picture {
@@ -29,7 +33,7 @@
         }
     }
 
-    div {
+    .title-container {
         position: absolute;
         bottom: 0;
         width: 100% !important;
