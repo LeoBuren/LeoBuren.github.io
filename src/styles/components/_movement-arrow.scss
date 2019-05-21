@@ -2,19 +2,50 @@
     position: fixed;
     display: block;
     bottom: 2rem;
-    right: 3rem;
+    right: 2rem;
     color: $accent-color;
     z-index: 10;
     height: 64px;
     
-    transition: opacity 1.2s ease-out;
+    transition: opacity 1.2s ease-out, color 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 
     i, svg {
         font-size: 4em;
         &:hover {
-            animation:shake-top .8s cubic-bezier(.455,.03,.515,.955) both
+            animation:heartbeat .8s cubic-bezier(.455,.03,.515,.955) both;
         }
     }
     
-    @keyframes shake-top{0%,100%{transform:rotate(0deg);transform-origin:50% 0}10%{transform:rotate(2deg)}20%,40%,60%{transform:rotate(-3deg)}30%,50%,70%{transform:rotate(3deg)}80%{transform:rotate(-2deg)}90%{transform:rotate(2deg)}}
+    @keyframes heartbeat {
+        from {
+                  transform: scale(1);
+                  transform-origin: center center;
+                  animation-timing-function: ease-out;
+        }
+        10% {
+                  transform: scale(0.91);
+                  animation-timing-function: ease-in;
+        }
+        17% {
+                  transform: scale(0.98);
+                  animation-timing-function: ease-out;
+        }
+        33% {
+                  transform: scale(0.87);
+                  animation-timing-function: ease-in;
+        }
+        45% {
+                  transform: scale(1);
+                  animation-timing-function: ease-out;
+        }
+      }
+
+    &#to-top {
+        transform: rotate(180deg);
+        font-size: .6em;
+
+        &:hover, &:focus, &:focus-within {
+            color:hsl(210, 100%, 60%);
+        }
+    }
 }

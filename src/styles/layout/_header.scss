@@ -14,12 +14,6 @@ header {
       @include mqh(medium) {
         padding-top: $padding;
     }
-    &:not(.sticky) {
-        div.navbar__dropdown {
-            width: 61.4px;
-            height: 20px;
-        }
-    }
       &.sticky {
           position: fixed;
           top: 0;
