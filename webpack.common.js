@@ -5,7 +5,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 const PreloadWebpackPlugin = require('preload-webpack-plugin');
-const WebpackPwaManifest = require('webpack-pwa-manifest');
 
 module.exports = {
   mode: 'development',
@@ -117,13 +116,6 @@ module.exports = {
       filename: 'webpack-bundle.css',
       chunkFilename: '[id].css'
     }),
-    new WebpackPwaManifest({
-      name: 'My Progressive Web App',
-      short_name: 'MyPWA',
-      description: 'My awesome Progressive Web App!',
-      background_color: '#ffffff',
-      crossorigin: 'use-credentials'
-    })
   ],
   externals: {
     $: 'jquery',
