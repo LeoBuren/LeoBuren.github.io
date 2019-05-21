@@ -1,4 +1,4 @@
-require('offline-plugin/runtime').install();
+//require('offline-plugin/runtime').install();
 import './images/Leo_Buren_CV.pdf';
 
 import './index.html';
