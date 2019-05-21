@@ -55,6 +55,7 @@ main {
                     padding-right: 1em;
                 }
                 @include mq(xl) {
+                    padding-right: 0;
                     @include mqh(medium) {
                         padding-top: calc(#{$padding} * 2);
                     }
@@ -67,7 +68,7 @@ main {
                     font-size: 2.5em;
                     @include mq(xl) {
                         @include mqh(medium) {
-                            height: 180px;
+                            height: 225px;
                         overflow: hidden;
                         }
                         
