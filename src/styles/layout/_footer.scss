@@ -1,13 +1,17 @@
 footer {
     position: relative;
-    margin-top: calc(#{$padding} * 5);
-    padding: calc(#{$padding} * 3) 0;
-    padding-bottom: 1rem;
     color: #fff;
+    background: #036;
     position: relative;
-    margin-top: 28rem;
-    padding: 14rem 0 1rem;
-    color: #fff;
+    @include mq(small) {
+        background: none;
+    }
+
+    @include mq(xl) {
+        margin-top: 28rem;
+        padding: 14rem 0 1rem;
+    }
+
 
     .social-bar {
         position: relative;
@@ -41,18 +45,27 @@ footer {
         bottom: 0;
         height: 100%;
         max-width: 100%;
+        width: 100%;
+        @include mq(xl) {
+            width: calc((100% - #{$max-width}) / 2 + #{$max-width} + #{$padding});
+        }
         
-        width: calc((100% - #{$max-width}) / 2 + #{$max-width} + #{$padding});
         
     }
 
     .long-card {
-        position: absolute;
-        top: calc(-500px + 8em);
+        @include mq(xl) {
+            position: absolute;
+            top: calc(-500px + 8em);
+        }
+        
 
         figure {
-            width: 60%;
-            height: 500px;
+            @include mq(xl) {
+                width: 60%;
+                height: 500px;
+            }
+            
             box-shadow: none;
 
             img {

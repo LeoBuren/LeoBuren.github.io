@@ -1,6 +1,8 @@
 .title-container {
     @include width();
     position: relative;
+    padding-top: 0;
+    padding-bottom: 0;
 
     &__title {
         padding-bottom: 1em;

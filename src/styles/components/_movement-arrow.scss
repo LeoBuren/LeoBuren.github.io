@@ -1,8 +1,8 @@
 .movement-arrow {
     position: fixed;
     display: block;
-    bottom: 2rem;
-    right: 2rem;
+    bottom: 1rem;
+    right: 1rem;
     color: $accent-color;
     z-index: 10;
     height: 64px;
@@ -41,6 +41,11 @@
       }
 
     &#to-top {
+        display: none;
+
+        @include mq(xl) {
+            display: block;
+        }
         transform: rotate(180deg);
         font-size: .6em;
 

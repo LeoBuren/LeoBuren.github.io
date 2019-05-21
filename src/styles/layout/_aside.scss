@@ -21,6 +21,7 @@
         padding: 1.5rem;
         display: flex;
         flex-direction: column;
+        padding-top: 5px;
 
 
         a {
@@ -42,7 +43,6 @@
         .header {
             padding-bottom: $padding;
             align-items: center;
-            height: 86px;
             box-sizing: unset;
             display: flex;
             align-items: center;
