@@ -8,12 +8,12 @@
         @include mqh(medium) {
             overflow: initial;
 
-            container {
+            .lazy-container {
                 height: 100%;
             }
         }
     }
-    container {
+    .lazy-container {
         margin-left: auto;
         width: 100%;
         @include mq(xl) {

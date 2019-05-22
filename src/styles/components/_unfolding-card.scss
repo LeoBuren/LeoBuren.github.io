@@ -3,6 +3,9 @@
     position: relative;
     overflow: hidden;
     border-radius: $border-radius;
+    box-shadow: 0 10px 20px rgba(0,0,0,.19), 0 6px 6px rgba(0,0,0,.23);
+    max-height: 250px;
+
     &:hover:not(:focus):not(:focus-within) {
         cursor: pointer;
     }
@@ -70,28 +73,26 @@
         }
     }
 
-    &:not(:focus-within), &:not(:focus) {
-        .unfolding-list__item {
-            transition: none !important;
-        }
-        box-shadow: 0 10px 20px rgba(0,0,0,.19), 0 6px 6px rgba(0,0,0,.23);
-        max-height: 250px;
-    }
     &:focus-within, &:focus {
         outline: none;
-        
+        box-shadow: none;
+        max-height: initial;
         .unfolding-list {
-            display: block;
             overflow: hidden;
 
             &__item {
                 position: initial;
                 transform: perspective(350px) rotateX(0deg);
 
+                &:nth-child(1) {
+                    transition: transform 0.2s linear 0s, background 0.2s ease-in 0s;
+                }
                 &:nth-child(2) {
+                    transition: transform 0.2s linear 0.4s, background 0.2s ease-in 0.4s;
                     transition-delay: 0.2s;
                 }
                 &:nth-child(3) {
+                    transition: transform 0.2s linear 0.2s, background 0.2s ease-in 0.2s;
                     transition-delay: 0.4s;
                 }
             }
