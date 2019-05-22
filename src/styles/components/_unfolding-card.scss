@@ -79,6 +79,7 @@
         max-height: initial;
         .unfolding-list {
             overflow: hidden;
+            opacity: 1;
 
             &__item {
                 position: initial;
