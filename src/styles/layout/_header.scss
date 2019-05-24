@@ -27,6 +27,13 @@ header {
           color: $dark-blue;
           overflow: hidden;
 
+          a > svg {
+            display: block;
+    
+            &:hover {
+                filter: hue-rotate(-180deg);
+            }
+        }
           
 
           ul, i, svg, .inner {
@@ -83,6 +90,16 @@ header {
 
           & > a, img, h1 {
               display: inline;
+          }
+
+          & > a > svg {
+              height: 38px;
+              width: auto;
+              transition: filter 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+              &:hover {
+                filter: hue-rotate(180deg);
+              }
           }
 
           h1 {
