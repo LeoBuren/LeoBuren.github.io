@@ -18,13 +18,13 @@ var __wpo = {
     "c816f8dab5f6892d07aa1d61cdf5dd4b73d25c48": "./images/markus-spiske-666905-unsplash_w_1400.jpg",
     "f676868d0ec5afcd756041825f387e5c88a6eaea": "./images/Leo_Buren_CV.pdf",
     "7d32189fe0f935415dcc3c48b0cbe5a27ef67fed": "./webpack-bundle.css",
-    "2f56076fc02112ac18f770df4fcb7c7872a34f32": "./webpack-bundle.js",
+    "aa3c448867c02539b81a0856ff922e5d79a21f4a": "./webpack-bundle.js",
     "6c95845e623267fb840eeea7899e990f7b18fb0a": "./404.html",
-    "992b1e680b416d9ced7b307df66d057d93d12908": "./about.html"
+    "87f61618fff7cd88c109593f29eb26ef607f8a79": "./about.html"
   },
   "strategy": "changed",
   "responseStrategy": "cache-first",
-  "version": "2019-5-27 11:30:13",
+  "version": "2019-5-27 11:36:45",
   "name": "webpack-offline",
   "pluginVersion": "5.0.6",
   "relativePaths": true
