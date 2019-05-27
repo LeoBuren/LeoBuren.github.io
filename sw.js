@@ -6,6 +6,7 @@ var __wpo = {
       "./images/Leo_Buren_CV.pdf",
       "./webpack-bundle.css",
       "./webpack-bundle.js",
+      "./",
       "./404.html",
       "./about.html"
     ],
@@ -19,12 +20,13 @@ var __wpo = {
     "f676868d0ec5afcd756041825f387e5c88a6eaea": "./images/Leo_Buren_CV.pdf",
     "7d32189fe0f935415dcc3c48b0cbe5a27ef67fed": "./webpack-bundle.css",
     "034dca631984f7c0e9233346c930eb16f1624743": "./webpack-bundle.js",
+    "c747ef9a6de1c6b1f5f786be724f3c79bb1ef111": "./",
     "6c95845e623267fb840eeea7899e990f7b18fb0a": "./404.html",
     "2b5b80edff11bbb4cdad46d945f6951b444c1ad6": "./about.html"
   },
   "strategy": "changed",
   "responseStrategy": "cache-first",
-  "version": "2019-5-27 11:58:03",
+  "version": "2019-5-27 11:59:52",
   "name": "webpack-offline",
   "pluginVersion": "5.0.6",
   "relativePaths": true
