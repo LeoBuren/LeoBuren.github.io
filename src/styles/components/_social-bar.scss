@@ -19,7 +19,7 @@
         position: absolute;
         flex-direction: column;
         right: 0;
-        bottom: $padding;
+        bottom: calc(#{$padding} - 6px);
         align-items: start;
         height: 5em;
         z-index: 3;

@@ -30,8 +30,8 @@ header {
           a > svg {
             display: block;
     
-            &:hover {
-                filter: hue-rotate(-180deg);
+            path {
+                fill: $dark-blue;
             }
         }
           
@@ -92,14 +92,19 @@ header {
               display: inline;
           }
 
-          & > a > svg {
-              height: 38px;
-              width: auto;
-              transition: filter 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-
-              &:hover {
-                filter: hue-rotate(180deg);
-              }
+          & > a {
+            font-size: 0;
+            & > svg {
+                height: 40px;
+                width: auto;
+                path {
+                    transition: fill 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+                    fill: hsl(210, 100%, 94%);
+                }
+                &:hover path {
+                    fill: hsl(210, 100%, 60%);
+                }
+            }
           }
 
           h1 {

@@ -25,21 +25,12 @@
         font-weight: 700;
     }
     
-    #top h1 {
-        color: #001429;
-        border-color: #001429;
-    
-        &:before, &:after {
-            border-color: #f7f7f7;
+    #top > a > svg {
+        path {
+            fill: $dark-blue;
         }
-    
-        &:hover {
-            color: #39f;
-            border-color: #39f;
-    
-            &:before, &:after {
-                border-color: #fff;
-            }
+        &:hover path {
+            fill: hsl(210, 100%, 60%);
         }
     }
 } 

@@ -18,15 +18,15 @@ var __wpo = {
     "014aa3ef72cf2d84ee3776f0672b7e71e477463c": "./images/favicon.svg",
     "c816f8dab5f6892d07aa1d61cdf5dd4b73d25c48": "./images/markus-spiske-666905-unsplash_w_1400.jpg",
     "f676868d0ec5afcd756041825f387e5c88a6eaea": "./images/Leo_Buren_CV.pdf",
-    "faf136c184c1b86b3b1d124481577b05e08fb72e": "./webpack-bundle.css",
-    "397437127509e11b957933866bb2c891db181623": "./webpack-bundle.js",
-    "a1b081fe1eb650832128be4ab1c7c431d21484dc": "./",
+    "7d32189fe0f935415dcc3c48b0cbe5a27ef67fed": "./webpack-bundle.css",
+    "2f56076fc02112ac18f770df4fcb7c7872a34f32": "./webpack-bundle.js",
+    "71dfaf87f07c92875d6e5c3e91502267e3760aaf": "./",
     "6c95845e623267fb840eeea7899e990f7b18fb0a": "./404.html",
-    "26ae366cf59e5e28e92c685f85507deb10b6cf6f": "./about.html"
+    "992b1e680b416d9ced7b307df66d057d93d12908": "./about.html"
   },
   "strategy": "changed",
   "responseStrategy": "cache-first",
-  "version": "2019-5-24 22:18:53",
+  "version": "2019-5-27 10:58:50",
   "name": "webpack-offline",
   "pluginVersion": "5.0.6",
   "relativePaths": true
