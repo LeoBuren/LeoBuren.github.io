@@ -21,7 +21,7 @@
         right: 0;
         bottom: calc(#{$padding} - 6px);
         align-items: start;
-        height: 5em;
+        height: calc(100% - 5em);
         z-index: 3;
         width: initial;
         height: 100vh;
@@ -42,6 +42,6 @@
         }
     }
     @include mq(xl) {
-        right: calc(((100% - #{$max-width}) / 2));
+        right: 0;
     }
 }

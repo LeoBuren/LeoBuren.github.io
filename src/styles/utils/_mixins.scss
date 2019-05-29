@@ -114,6 +114,9 @@ position: relative;
   @include mq(large) {
     width: 93vw;
   }
+  @include mq(xxl) {
+    max-width: $xxl-max-width;
+  }
 }
 
 

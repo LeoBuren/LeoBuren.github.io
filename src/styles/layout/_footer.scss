@@ -49,6 +49,9 @@ footer {
         @include mq(xl) {
             width: calc((100% - #{$max-width}) / 2 + #{$max-width} + #{$padding});
         }
+        @include mq(xxl) {
+            width: calc((100% - #{$xxl-max-width}) / 2 + #{$xxl-max-width} + #{$padding});
+        }
         
         
     }
