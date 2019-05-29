@@ -22,9 +22,10 @@ main {
         overflow: hidden;
         padding-top: 80px;
         position: relative;
-        height: 100vh;
-
         background: hsl(210, 100%, 8%);
+        @include mq(small) {
+            height: 100vh;
+        }
         @include mq(large) {
             background: none;
         }
